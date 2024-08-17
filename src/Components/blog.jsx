@@ -561,7 +561,7 @@ const BlogPage = () => {
           newMoreOnHighBloodPressure={newMoreOnHighBloodPressure}
         />
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
 
       {/* Sidebar */}

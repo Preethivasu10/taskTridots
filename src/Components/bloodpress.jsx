@@ -13,7 +13,7 @@ const LivingWithHighBloodPressure = ({ posts }) => {
             <div className="living-text">
               <h4 className="living-heading">{post.title}</h4>
               <p className="living-description">{post.description}</p>
-              <a href="#" className="living-read-more">
+              <a href="##" className="living-read-more">
                 Read more in {post.time} <FaLongArrowAltRight />
               </a>
             </div>
