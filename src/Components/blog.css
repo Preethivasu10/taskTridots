@@ -1,7 +1,7 @@
 .blog-page {
   display: flex;
   padding: 20px;
-  margin: 40px;
+  margin: 30px;
 }
 
 .main-content {
@@ -109,9 +109,11 @@
   margin-top: 20px;
   border: 1px solid gainsboro;
   border-radius: 8px;
-  width: 430px;
+  width: 400px;
   /* height: 900px; */
   margin-left: -400px;
+  position: relative;
+  left:10px;
 }
 
 .read-more {
@@ -524,7 +526,7 @@
 }
 
 .moreBloodPr-card-image {
-  width: 600px;
+  width: 450px;
   height: 290px;
   object-fit: cover;
   background-color: #000000;
@@ -600,17 +602,17 @@
 }
 
 .bloodPrSp-card-grid {
-  width: 100%;
+  width: 110%;
   display: flex;
-  gap: 50px;
+  gap: 30px;
   justify-content: space-between;
 }
 
 .bloodPrSp-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 100%;
+  gap: 5px;
+  width: 110%;
   border-radius: 7px;
   /* padding: 20px; */
   background-color: white;
@@ -618,10 +620,9 @@
 }
 
 .bloodPrSp-card-image {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
+  width: 25%;
+  height: 100px;
+ border-radius: 8px;
 
   object-fit: cover;
 }

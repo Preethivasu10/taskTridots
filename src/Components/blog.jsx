@@ -1,6 +1,8 @@
 // BlogPage.js
 import React from "react";
 import "./blog.css";
+import { IoSearch } from "react-icons/io5";
+
 import {
   FaTag,
   FaTelegram,
@@ -9,8 +11,8 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import Treatment from "./TreatmentPage";
-import LivingWithHighBloodPressure from "./bloodpress";
+
+
 
 const BlogPage = () => {
   const featuredPost = {
@@ -328,7 +330,7 @@ const BlogPage = () => {
         "Found trustworthy",
         "Felt respected",
       ],
-      imageUrl: "https://via.placeholder.com/600/400",
+      imageUrl: "https://imgv3.fotor.com/images/slider-image/A-clear-close-up-photo-of-a-woman.jpg",
     },
     {
       name: "Dr. Donald Hopkins, MD",
@@ -342,7 +344,7 @@ const BlogPage = () => {
         "Found trustworthy",
         "Felt respected",
       ],
-      imageUrl: "https://via.placeholder.com/600/400",
+      imageUrl: "https://imgv3.fotor.com/images/slider-image/A-clear-close-up-photo-of-a-woman.jpg",
     },
     {
       name: "Dr. Donald Hopkins, MD",
@@ -406,15 +408,7 @@ const BlogPage = () => {
       imageUrl: "https://via.placeholder.com/600/400",
       readTime: "10 Minutes",
     },
-    {
-      title: "Herbs for High Blood Pressure: What to Know",
-      description:
-        "Some herbs contain several substances that may help treat high blood pressure. Examples of antihypertensive herbs include garlic, turmeric, and ginger...",
-      author: "By Tessa Cooper",
-      date: "January 12, 2023",
-      imageUrl: "https://via.placeholder.com/600/400",
-      readTime: "10 Minutes",
-    },
+    
   ];
 
   const recentBlogData = [
@@ -571,14 +565,29 @@ const BlogPage = () => {
           placeholder="Search..."
           style={{
             padding: "10px",
-            width: "430px",
+            width: "400px",
             borderRadius: "5px",
             border: "1px solid #ccc",
             fontSize: "16px",
             marginTop: "30px",
-            marginLeft: "-400px",
+            marginLeft: "-350px",
+            position: "relative",
+            left:"-40px",
           }}
         />
+        <span
+    style={{
+     fontSize:"18px",
+      position: "absolute",
+      right: "100px", // Position the icon inside the input field
+      top: "14%",
+      transform: "translateY(-50%)",
+      pointerEvents: "none", // Make the icon unclickable
+    }}
+  >
+   <IoSearch />
+
+  </span>
         <div className="card">
           <SidebarSection title="Categories" items={categories} />
           <NewRecentBlog
@@ -727,13 +736,14 @@ const HighBloodPressureSpecialist = ({ newBloodPressureSpecialist }) => {
       <div className="bloodPrSp-card-grid">
         {newBloodPressureSpecialist.map((card, index) => (
           <div key={index} className="bloodPrSp-card">
-            <img
+            
+            <div className="bloodPrSp-card-content">
+              <div className="bloodPrSp-card-content-heading">
+              <img
               src={card.imageUrl}
               alt="Card thumbnail"
               className="bloodPrSp-card-image"
             />
-            <div className="bloodPrSp-card-content">
-              <div className="bloodPrSp-card-content-heading">
                 <div className="bloodPrSp-card-title">{card.name}</div>
                 <div className="bloodPrSp-card-rating">
                   <FaStar className="starr" />
@@ -819,69 +829,6 @@ const NewTags = ({ tags }) => {
   );
 };
 
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-column">
-          <img
-            src="https://via.placeholder.com/130/10"
-            alt="Logo"
-            className="footer-logo"
-          />
-        </div>
-        <div className="footer-column">
-          <h3>Explore</h3>
-          <ul>
-            <li>
-              <a href="#home">Home Page</a>
-            </li>
-            <li>
-              <a href="#about">About Us</a>
-            </li>
-            <li>
-              <a href="#services">FAQs</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h3>Legal</h3>
-          <ul>
-            <li>
-              <a href="#privacy">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#terms">Terms of Service</a>
-            </li>
-            <li>
-              <a href="#terms">Documentation</a>
-            </li>
-            <li>
-              <a href="#terms">Site Map</a>
-            </li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h3>Subscribe</h3>
-          <div className="footer-sub">
-            <input type="email" placeholder="Your email" />
-            <button type="submit">
-              <FaTelegram size={17} color="#ffffff" />
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="footer-bottom">
-        <p>
-          &copy; {new Date().getFullYear()} Global Wellness Alliance. All Rights
-          Reserved.
-        </p>
-      </div>
-    </footer>
-  );
-};
 
+  
 export default BlogPage;

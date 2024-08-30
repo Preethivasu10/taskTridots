@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "James",
+      "status": "Pending",
+      "employeeId": "TT-2024-008",
+      "fromDate": "2024-05-30",
+      "totalLeaveDays": "3 days",
+      "endDate": "2024-06-08"
+    },
+    {
+      "id": 2,
+      "name": "James",
+      "status": "Approved",
+      "employeeId": "TT-2024-008",
+      "fromDate": "2024-05-30",
+      "totalLeaveDays": "3 days",
+      "endDate": "2024-06-08"
+    },
+    {
+        "id": 3,
+        "name": "James V",
+        "status": "Approved",
+        "employeeId": "TT-2024-008",
+        "fromDate": "2024-05-30",
+        "totalLeaveDays": "3 days",
+        "endDate": "2024-06-08"
+      }
+      
+  ]
+  
